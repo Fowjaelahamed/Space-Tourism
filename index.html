@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
+
+  <title>Space tourism</title>
+  <style>
+    body {
+      margin: 0;
+      text-align: center;
+      background-image: url("assets/home/background-home-desktop.jpg");
+      background-size: cover;
+    }
+    /*------------ nav design ------------- */
+    .main-nav {
+      margin-top: 2.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      margin-left: auto;
+      margin-right: 2.5rem;
+    }
+
+    hr {
+      width: 29.5625rem;
+      color: #979797;
+      opacity: 0.25;
+      border-style: solid;
+      margin: 0;
+      z-index: 1;
+    }
+
+    .blur {
+      position: absolute;
+    }
+
+    .menu {
+      width: 51.875rem;
+      padding: 2rem 0;
+      margin-left: -2rem;
+      backdrop-filter: blur(81.5485px);
+    }
+
+    .menu a {
+      position: relative;
+      margin-right: 2rem;
+      color: #D0D6F9;
+      font-size: 24px;
+      letter-spacing: 4.05px;
+      font-family: 'Barlow Condensed', sans-serif;
+      text-decoration: none;
+    }
+
+    a::after {
+      content: '';
+      position: absolute;
+      bottom: -1.75rem;
+      left: 0;
+      width: 100%;
+      height: 0.1em;
+      background-color: #979797;
+      opacity: 0;
+      transition: opacity 300ms, transform 300ms;
+    }
+
+    a:active::after,
+    a:hover::after,
+    a:focus::after {
+      opacity: 1;
+      transform: translate3d(0, 0.2em, 0);
+    }
+    /*------------------- landing page design -------------- */
+    .landing {
+      display: flex;
+      justify-content:space-around;
+      align-items:flex-end;
+      margin-top: 8.125rem;
+    }
+    .landing-description {
+      width: 28.125rem;
+      text-align: left;
+    }
+    h5 {
+      margin: 0;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.75rem;
+      letter-spacing: 4.725px;
+      line-height: 2.125rem;
+      color: #D0D6F9;
+      text-transform: uppercase;
+    }
+    h1{
+      font-family: 'Bellefair', serif;
+      font-size: 9.375rem;
+      line-height: 10.75rem;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      margin: 24px auto;
+    }
+    p{
+      margin: 0;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.125rem;
+      line-height: 2rem;
+      color: #D0D6F9;
+    }
+    .explore-btn{
+      font-family: 'Bellefair', serif;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #0B0D17;
+      width: 17.125rem;
+      height: 17.125rem;
+      border-radius: 100%;
+    }
+    /* .explore-btn:active,
+    .explore-btn:hover{
+      
+    } */
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="main-nav">
+    <img class="logo" src="assets/shared/logo.svg" alt="">
+    <hr>
+    <div class="blur">
+    </div>
+    <div class="menu">
+      <a href="#">00 Home</a>
+      <a href="#">01 Destination</a>
+      <a href="#">02 Crew</a>
+      <a href="#">03 Technology</a>
+    </div>
+  </nav>
+  <div class="landing">
+    <div class="landing-description">
+      <h5>So, you want to travel to</h5>
+      <h1>Space</h1>
+      <p>Let’s face it; if you want to go to space, you might as well genuinely go to
+        outer space and not hover kind of on the edge of it. Well sit back, and relax
+        because we’ll give you a truly out of this world experience!</p>
+    </div>
+    <button class="explore-btn">Explore</button>
+  </div>
+</body>
+
+</html>
