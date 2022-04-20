@@ -52,6 +52,9 @@
       margin-left: -2rem;
       backdrop-filter: blur(81.5485px);
     }
+    .menu span{
+      color: #FFFFFF;
+    }
 
     .menu a {
       position: relative;
@@ -63,7 +66,7 @@
       text-decoration: none;
     }
 
-    a::after {
+    .menu a::after {
       content: '';
       position: absolute;
       bottom: -1.75rem;
@@ -75,9 +78,9 @@
       transition: opacity 300ms, transform 300ms;
     }
 
-    a:active::after,
-    a:hover::after,
-    a:focus::after {
+    .menu a:active::after,
+    .menu a:hover::after,
+    .menu a:focus::after {
       opacity: 1;
       transform: translate3d(0, 0.2em, 0);
     }
@@ -96,7 +99,7 @@
       color: #FFFFFF;
     }
 
-    span {
+    h5 span {
       opacity: 0.25;
     }
 
@@ -117,7 +120,8 @@
       text-align: left;
     }
 
-    .moon-description a {
+    .destination-menu a {
+      position: relative;
       margin-right: 36px;
       font-size: 16px;
       line-height: 19px;
@@ -128,6 +132,23 @@
       text-decoration: none;
       color: #D0D6F9;
       font-family: 'Barlow Condensed', sans-serif;
+    }
+
+    .destination-menu a::after {
+      content: "";
+      position: absolute;
+      bottom: -0.75rem;
+      left: 0;
+      width: 100%;
+      height: 0.1em;
+      background-color: #FFFFFF;
+      opacity: 0;
+      transition: opacity 300ms, transform 300ms;
+    }
+
+    .destination-menu a:hover::after {
+      opacity: 1;
+      transform: translate3d(0, 0.2em, 0);
     }
 
     h2 {
@@ -172,8 +193,9 @@
       color: #FFFFFF;
       font-family: 'Bellefair', serif;
     }
+
     .bottom-container {
-      margin-top: 28px  ;
+      margin-top: 28px;
       display: flex;
       justify-content: space-between;
     }
@@ -188,10 +210,10 @@
     <div class="blur">
     </div>
     <div class="menu">
-      <a href="index.html">00 Home</a>
-      <a href="destination-moon.html">01 Destination</a>
-      <a href="crew-commander.html">02 Crew</a>
-      <a href="technology-vehicle.html">03 Technology</a>
+      <a href="index.html"><span>00</span> Home</a>
+      <a href="destination-moon.html" ><span>01</span> Destination</a>
+      <a href="crew-commander.html" ><span>02</span> Crew</a>
+      <a href="technology-vehicle.html"><span>03</span> Technology</a>
     </div>
   </nav>
   <!-- -----------destination -------------- -->
@@ -200,10 +222,12 @@
     <div class="container">
       <img class="moon" src="assets/destination/image-moon.png" alt="">
       <div class="moon-description">
-        <a href="">Moon</a>
-        <a href="">Mars</a>
-        <a href="">Europa</a>
-        <a href="">Titan</a>
+        <div class="destination-menu">
+          <a href="destination-moon.html">Moon</a>
+          <a href="destination-mars.html">Mars</a>
+          <a href="destination-europa.html">Europa</a>
+          <a href="destination-titan.html">Titan</a>
+        </div>
         <h2>Moon</h2>
         <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help
           regain perspective and come back refreshed. While you’re there, take in some history
@@ -217,7 +241,7 @@
           <div>
             <h4>Est. travel time</h4>
             <h3>3 days</h3>
-        </div>
+          </div>
         </div>
       </div>
     </div>
