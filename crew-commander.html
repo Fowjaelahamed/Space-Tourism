@@ -1,27 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap"
+    rel="stylesheet">
+  <!-- font awsome -->
+  <script src="https://kit.fontawesome.com/8c76f50128.js" crossorigin="anonymous"></script>
+  <title>Space Tourism</title>
+  <style>
+    body {
+      margin: 0;
+      text-align: center;
+      background-image: url("assets/crew/background-crew-desktop.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    /*------------ nav design ------------- */
+    .main-nav {
+      margin-top: 2.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      margin-left: auto;
+      margin-right: 2.5rem;
+    }
+
+    hr {
+      width: 29.5625rem;
+      color: #979797;
+      opacity: 0.25;
+      border-style: solid;
+      margin: 0;
+      z-index: 1;
+    }
+
+    .blur {
+      position: absolute;
+    }
+
+    .menu {
+      width: 51.875rem;
+      padding: 2rem 0;
+      margin-left: -2rem;
+      backdrop-filter: blur(81.5485px);
+    }
+
+    .menu span {
+      color: #FFFFFF;
+    }
+
+    .menu a {
+      position: relative;
+      margin-right: 2rem;
+      color: #D0D6F9;
+      font-size: 24px;
+      letter-spacing: 4.05px;
+      font-family: 'Barlow Condensed', sans-serif;
+      text-decoration: none;
+    }
+
+    .menu a::after {
+      content: '';
+      position: absolute;
+      bottom: -1.75rem;
+      left: 0;
+      width: 100%;
+      height: 0.1em;
+      background-color: #979797;
+      opacity: 0;
+      transition: opacity 300ms, transform 300ms;
+    }
+
+    .menu a:active::after,
+    .menu a:hover::after,
+    .menu a:focus::after {
+      opacity: 1;
+      transform: translate3d(0, 0.2em, 0);
+    }
+
+    /*------------ crew design ------- */
+    h5 {
+      margin: 76px auto 64px 166px;
+      width: 23.875rem;
+      height: 2.125rem;
+      font-size: 28px;
+      line-height: 34px;
+      letter-spacing: 4.725px;
+      font-style: normal;
+      text-transform: uppercase;
+      font-family: 'Barlow Condensed', sans-serif;
+      color: #FFFFFF;
+    }
+
+    h5 span {
+      opacity: 0.25;
+    }
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .crew-description {
+      width: 500px;
+      height: 406px;
+      text-align: left;
+    }
+        
+    h4 {
+      font-family: 'Bellefair';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 37px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      opacity: 0.5;
+      margin: 0px auto 15px auto;
+    }
+
+    h3 {
+      margin: 0px auto 27px auto;
+      font-family: 'Bellefair';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 56px;
+      line-height: 64px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+
+    p {
+      margin: 0px auto 120px auto;
+      font-family: 'Barlow';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 32px;
+      color: #D0D6F9;
+    }
+
+    .fas {
+      width: 15px;
+      height: 15px;
+      margin-right: 24px;
+      color: #FFFFFF;
+      opacity: 0.17;
+    }
+    .fas:active,
+    .fas:hover {
+      opacity: 1;
+    }
+  </style>
 </head>
+
 <body>
-
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
-
-  02 Meet your crew
-
-  Commander
-  Douglas Hurley
-
-  Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
-  and former NASA astronaut. He launched into space for the third time as 
-  commander of Crew Dragon Demo-2.
+  <!-- navbar -->
+  <nav class="main-nav">
+    <img class="logo" src="assets/shared/logo.svg" alt="">
+    <hr>
+    <div class="blur">
+    </div>
+    <div class="menu">
+      <a href="index.html"><span>00</span> Home</a>
+      <a href="destination-moon.html"><span>01</span> Destination</a>
+      <a href="crew-commander.html"><span>02</span> Crew</a>
+      <a href="technology-vehicle.html"><span>03</span> Technology</a>
+    </div>
+  </nav>
+  <!-- ---------- crew details ---------- -->
+  <section>
+    <h5><span>02</span> Meet Your Crew</h5>
+    <div class="container">
+      <div class="crew-description">
+        <h4>Commander</h4>
+        <h3>Douglas Hurley</h3>
+        <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot
+          and former NASA astronaut. He launched into space for the third time as
+          commander of Crew Dragon Demo-2.</p>
+        <div class="indicator">
+          <a href="crew-commander.html"><i class="fas fa-circle"></i></a>
+          <a href="crew-specialist.html"><i class="fas fa-circle"></i></a>
+          <a href="crew-pilot.html"><i class="fas fa-circle"></i></a>
+          <a href="crew-engineer.html"><i class="fas fa-circle"></i></a>
+        </div>
+      </div>
+      <img src="assets/crew/image-douglas-hurley.png" alt="">
+    </div>
+  </section>
 </body>
+
 </html>
